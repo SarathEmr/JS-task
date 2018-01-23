@@ -2,7 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="scripts.js"></script>
+
   </head>
 
   <body>
@@ -12,30 +12,36 @@
       <h4>calculator</h4>
     </div>
     <!-- END calculator -->
-
     <!-- form -->
     <div class="task">
-      <h4>form validation</h4>
-      <script>submitFunction()</script>
-      <form name="myform" onsubmit="return submitFunction()">
-        <table>
-        <tr><td align="right">Name:</td><td align="left"><input type="text" name="name" required></td></tr><span id="message"></span>
-      <tr><td align="right">Email:</td><td align="left"><input type="text" name="email" required></td></tr>
-      <tr><td align="right">website:</td><td align="left"><input type="text" name="url"></td></tr>
-      <tr><td align="right">Message:</td><td align="left"> <textarea name="addr" rows="5" cols="15"></textarea></td></tr>
-      <tr><td></td><td align="left"><input type="submit" value="submit"></td></tr>
-      </table>
-      </form>
+      <h4>form</h4>
+      <table>
+        <tr>
+        <td>Name:</td><td><input type="text" id="name" onchange="checkName(this.value)"> </td><td><p id="errorname" align="left" style="color:red"></p></td>
+      </tr>
+      <tr><td>Email:</td><td><input type="text" id="email" onchange="checkEmail(this.value)"></td><td><p id="erroremail" align="left" style="color:red"></p></td>
+      </tr>
+      <tr><td>Website:</td><td><input type="text" onchange="checkweb(this.value)"></td><td><p id="errorweb" align="left" style="color:red"></p></td>
+      </tr>
+      <tr><td>message:</td><td><textarea name="addr" rows="5" cols="15"></textarea></td></tr>
+      <tr><td> <button onclick="checkfield()">submit</button> </td></tr>
+    </table>
+
+
+
     </div>
     <!-- END form -->
 
     <!-- image slider -->
     <div class="task">
-      <h4>image slider</h4>
+      <h4></h4>
     </div>
     <!-- END image slider -->
 
     <!-- table -->
+
+  }
+
     <div class="task">
       <h4>table</h4>
     </div>
@@ -48,4 +54,5 @@
     <!-- END to-do list -->
 
   </body>
+  <script src="scripts.js"></script>
 </html>
