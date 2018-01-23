@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+      <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="scripts.js"></script>
-  </head> 
 
-  <body>
+  </head>
+
+<body onload="retrievestate()">
 
     <!-- calculator -->
     <div class="task">
@@ -32,10 +33,27 @@
     <!-- END table -->
 
     <!-- to-do list -->
-    <div class="task">
+    <div class="tasktodolist">
       <h4>to-do list</h4>
+
+      <form id="form1" action="#tasktodolist">
+        <div>
+          <label for="newitem">Add item</label>
+          <input type="text" name="newitem" id="newitem"
+                 placeholder="new item" required>
+          <input type="submit" value="Add">
+        </div>
+      </form>
+        <ul id="todolist"></ul>
+
+
+
     </div>
+
+
+
     <!-- END to-do list -->
-      
+
   </body>
+<script type="text/javascript" src="scripts.js"></script>
 </html>
