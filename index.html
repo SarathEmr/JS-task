@@ -16,13 +16,14 @@
     <!-- form -->
     <div class="task">
       <h4>form validation</h4>
-      <form>
+      <script>submitFunction()</script>
+      <form name="myform" onsubmit="return submitFunction()">
         <table>
-        <tr><td align="right">Name:</td><td align="left"><input type="text" name="name" required></td></tr>
+        <tr><td align="right">Name:</td><td align="left"><input type="text" name="name" required></td></tr><span id="message"></span>
       <tr><td align="right">Email:</td><td align="left"><input type="text" name="email" required></td></tr>
-      <tr><td align="right">website:</td><td align="left"><input type="text" name="url" required></td></tr>
+      <tr><td align="right">website:</td><td align="left"><input type="text" name="url"></td></tr>
       <tr><td align="right">Message:</td><td align="left"> <textarea name="addr" rows="5" cols="15"></textarea></td></tr>
-      <tr><td></td><td align="left"><input type="submit"></td></tr>
+      <tr><td></td><td align="left"><input type="submit" value="submit"></td></tr>
       </table>
       </form>
     </div>
