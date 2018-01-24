@@ -5,6 +5,10 @@
   border: 1px solid #aaa;
 }
 
+#formtable{
+  border-style: none;
+}
+
 .task h4 {
   color: #999;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -12,22 +16,25 @@
   letter-spacing: 10px;
   text-transform: uppercase;
 }
-
-table {
+#checkbutton{
+  position: relative;
+  left: 10%;
+}
+#data_table {
   border-collapse: collapse;
 }
 
-table, th, td {
+#data_table, #data_table th, #data_table td {
   margin: 10px 0;
   border: solid 1px;
   padding: 2px 4px;
   font: 15px;
 }
 
-th {
+#data_table th {
   font-weight: bold;
 }
 
-td {
+#data_table td {
   text-align: center;
 }

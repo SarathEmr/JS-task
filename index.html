@@ -17,7 +17,7 @@
   <!-- form -->
   <div class="task">
     <h4>form</h4>
-    <table>
+    <table id="formtable">
       <tr>
         <td>Name:</td>
         <td><input type="text" id="name" onchange="checkName(this.value)"> </td>
@@ -43,10 +43,10 @@
         <td>message:</td>
         <td><textarea name="addr" rows="5" cols="15"></textarea></td>
       </tr>
-      <tr>
-        <td> <button onclick="checkfield()">submit</button> </td>
-      </tr>
-    </table>
+      </table>
+      <button id="checkbutton" onclick="checkfield()">submit</button>
+
+
   </div>
   <!-- END form -->
 
@@ -59,7 +59,7 @@
   <!-- table -->
   <div class="task">
     <h4>table</h4>
-    <table style="width: 100%" id="table">
+    <table style="width: 100%" id="data_table">
       <tr>
         <th>Id</th>
         <th onclick="sortTable()" style="cursor: pointer">Name</th>

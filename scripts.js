@@ -77,6 +77,7 @@ function checkfield() {
   } else if (namef == 2) {
     alert("name incorrect format");
   }
+}
 
   var table;
 
@@ -85,7 +86,7 @@ function checkfield() {
       .then((res) => res.json())
       .then((data) => {
         data.forEach((user) => {
-          table = document.getElementById('table');
+          table = document.getElementById('data_table');
           var row = table.insertRow(-1);
           var cell_id = row.insertCell(0);
           var cell_name = row.insertCell(1);
@@ -100,7 +101,7 @@ function checkfield() {
   }
 
   function sortTable() {
-    table = document.getElementById("table");
+    table = document.getElementById("data_table");
     var direction, isSwitching, toSwitch, x, y, count = 0,
       i;
     // Set the sorting direction
