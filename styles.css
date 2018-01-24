@@ -5,6 +5,10 @@
   border: 1px solid #aaa;
 }
 
+#formtable {
+  border-style: none;
+}
+
 .task h4 {
   color: #999;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -13,8 +17,7 @@
   text-transform: uppercase;
 }
 
-.button
-{
+.button {
   background-color: #FFFFFF;
   color: blue;
   padding: 15px 32px;
@@ -23,13 +26,34 @@
   margin: 4px;
   cursor: pointer;
 }
-.button1 {padding: 15px 26px;}
-.button2 {padding: 15px 29.5px;}
-.button3 {padding: 15px 32.5px;}
-.button4 {padding: 15px 30.5px;}
-.button5 {padding: 15px 28.5px;}
-.button6 {padding: 15px 33.5px;}
-.button7 {padding: 15px 30.5px;}
+
+.button1 {
+  padding: 15px 26px;
+}
+
+.button2 {
+  padding: 15px 29.5px;
+}
+
+.button3 {
+  padding: 15px 32.5px;
+}
+
+.button4 {
+  padding: 15px 30.5px;
+}
+
+.button5 {
+  padding: 15px 28.5px;
+}
+
+.button6 {
+  padding: 15px 33.5px;
+}
+
+.button7 {
+  padding: 15px 30.5px;
+}
 
 .tasktodolist h4 {
   color: #999;
@@ -45,17 +69,18 @@
   background-color: #eee;
   border: 1px solid #aaa;
   text-align: center;
-
 }
 
 #newitem {
   width: 160px;
 }
+
 #todolist {
   width: auto;
   text-align: center;
   z-index: 1;
 }
+
 #todolist li {
   border-radius: 2px;
   list-style: none;
@@ -63,18 +88,20 @@
   padding: 5px 10px;
   margin-bottom: 5px;
   position: relative;
-text-align: center;
+  text-align: center;
 }
+
 #todolist li:nth-child(2n) {
   background: #ccc;
 }
-#todolist li:hover:after,
-#todolist li.done:after {
+
+#todolist li:hover:after, #todolist li.done:after {
   content: '✔';
   color: #060;
   position: absolute;
   right: 5px;
 }
+
 #todolist li.done:hover:after {
   content: 'x';
   font-weight: bold;
@@ -82,22 +109,27 @@ text-align: center;
   position: absolute;
   right: 5px;
 }
-table {
+
+#checkbutton {
+  position: relative;
+  left: 10%;
+}
+
+#data_table {
   border-collapse: collapse;
 }
 
-table, th, td {
+#data_table, #data_table th, #data_table td {
   margin: 10px 0;
   border: solid 1px;
   padding: 2px 4px;
   font: 15px;
 }
 
-th {
+#data_table th {
   font-weight: bold;
 }
 
-td {
+#data_table td {
   text-align: center;
-
 }
