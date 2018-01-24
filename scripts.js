@@ -42,40 +42,43 @@ function checkweb(url) {
 
 function checkfield() {
   var name = document.getElementById("name").value;
-  var email = document.getElementById("email").value;
+  var mail = document.getElementById("email").value;
 
   if (name.length == 0) {
     document.getElementById("errorname").innerHTML = "name field is empty";
   } else {
 
     namef = 2;
-    checkName(name);
     document.getElementById("errorname").innerHTML = " ";
+    checkName(name);
   }
 
-  if (email.length == 0) {
+  if (mail.length == 0) {
     document.getElementById("erroremail").innerHTML = "email field is empty";
   } else {
     emailf = 2;
-    checkEmail(email);
-
-    document.getElementById("erroremail").innerHTML = " ";
+   document.getElementById("erroremail").innerHTML = " ";
+    checkEmail(mail);
   }
 
   if (namef == 1) {
     if (emailf == 1) {
-      {
-
         alert("submit successfully");
-      }
+    }
+    else if(emailf == 2) {
+
+      alert("email incorrect format");
     }
   } else if (namef == 2 && emailf == 2) {
+    console.log(emailf);
     alert("name  & email incorrect format");
-  } else if (emailf == 2) {
-    alert("email incorrect format");
-
   } else if (namef == 2) {
     alert("name incorrect format");
+  }
+  else if (emailf == 2) {
+
+    alert("email incorrect format");
+
   }
 }
 
