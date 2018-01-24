@@ -5,7 +5,7 @@
   border: 1px solid #aaa;
 }
 
-#formtable{
+#formtable {
   border-style: none;
 }
 
@@ -16,10 +16,12 @@
   letter-spacing: 10px;
   text-transform: uppercase;
 }
-#checkbutton{
+
+#checkbutton {
   position: relative;
   left: 10%;
 }
+
 #data_table {
   border-collapse: collapse;
 }
