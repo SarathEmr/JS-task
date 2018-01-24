@@ -13,6 +13,23 @@
   text-transform: uppercase;
 }
 
+.button
+{
+  background-color: #FFFFFF;
+  color: blue;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  margin: 4px;
+  cursor: pointer;
+}
+.button1 {padding: 15px 26px;}
+.button2 {padding: 15px 29.5px;}
+.button3 {padding: 15px 32.5px;}
+.button4 {padding: 15px 30.5px;}
+.button5 {padding: 15px 28.5px;}
+.button6 {padding: 15px 33.5px;}
+.button7 {padding: 15px 30.5px;}
 
 .tasktodolist h4 {
   color: #999;
