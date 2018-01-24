@@ -1,7 +1,7 @@
 .task {
   height: auto;
   margin: 5%;
-  background-color: #eee; 
+  background-color: #eee;
   border: 1px solid #aaa;
 }
 
@@ -13,22 +13,91 @@
   text-transform: uppercase;
 }
 
-/*calculator begin*/
-  .button
-  {
- 	  background-color: #FFFFFF;
-  	color: blue;
-  	padding: 15px 32px;
-  	text-align: center;
-  	display: inline-block;
-  	margin: 4px;
-  	cursor: pointer;
-	}
-	.button1 {padding: 15px 26px;}
-	.button2 {padding: 15px 29.5px;}
-	.button3 {padding: 15px 32.5px;}
-	.button4 {padding: 15px 30.5px;}
-	.button5 {padding: 15px 28.5px;}
-	.button6 {padding: 15px 33.5px;}
-	.button7 {padding: 15px 30.5px;}
-/*calculator end*/
+.button
+{
+  background-color: #FFFFFF;
+  color: blue;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  margin: 4px;
+  cursor: pointer;
+}
+.button1 {padding: 15px 26px;}
+.button2 {padding: 15px 29.5px;}
+.button3 {padding: 15px 32.5px;}
+.button4 {padding: 15px 30.5px;}
+.button5 {padding: 15px 28.5px;}
+.button6 {padding: 15px 33.5px;}
+.button7 {padding: 15px 30.5px;}
+
+.tasktodolist h4 {
+  color: #999;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+}
+
+.tasktodolist {
+  height: auto;
+  margin: 5%;
+  background-color: #eee;
+  border: 1px solid #aaa;
+  text-align: center;
+
+}
+
+#newitem {
+  width: 160px;
+}
+#todolist {
+  width: auto;
+  text-align: center;
+  z-index: 1;
+}
+#todolist li {
+  border-radius: 2px;
+  list-style: none;
+  background: #eee;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  position: relative;
+text-align: center;
+}
+#todolist li:nth-child(2n) {
+  background: #ccc;
+}
+#todolist li:hover:after,
+#todolist li.done:after {
+  content: '✔';
+  color: #060;
+  position: absolute;
+  right: 5px;
+}
+#todolist li.done:hover:after {
+  content: 'x';
+  font-weight: bold;
+  color: #c00;
+  position: absolute;
+  right: 5px;
+}
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  margin: 10px 0;
+  border: solid 1px;
+  padding: 2px 4px;
+  font: 15px;
+}
+
+th {
+  font-weight: bold;
+}
+
+td {
+  text-align: center;
+
+}

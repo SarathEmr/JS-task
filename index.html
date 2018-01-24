@@ -1,80 +1,108 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="scripts.js"></script>
-  </head> 
 
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+<script src="scripts.js"></script>
+</head>
 
-    <!-- calculator -->
-    <div class="task">
-      <h4>calculator</h4>
-      <form name="c">
-	  	<table>
-			  <tr>
-			  	<td>
-			  		<input type="text" name="text" style="width: 350px; height:50px">
-			  		<br>
-			  	</td>
-			  </tr>
-			  <tr>
-			 		<td>
-			 			<input type="button" class="button" value="c" onclick="c.text.value = ''">
-		  			<input type="button" class="button button1"value="x^2" onclick=square()>
-		  			<input type="button" class="button button2" value="%" onclick=modulus()>
-		  			<input type="button" class="button button3" font-size:12px value="/" onclick=div()>
-			 			<br>
-			 			<input type="button" class="button" value="7" onclick="c.text.value += '7'">
-			 			<input type="button" class="button" value="8" onclick="c.text.value += '8'">
-			 			<input type="button" class="button" value="9" onclick="c.text.value += '9'">
-			 			<input type="button" class="button" value="*" onclick=mul()>
-			 			<br>
-			 			<input type="button" class="button" value="4" onclick="c.text.value += '4'">
-			 			<input type="button" class="button" value="5" onclick="c.text.value += '5'">
-			 			<input type="button" class="button" value="6" onclick="c.text.value += '6'">
-			 			<input type="button" class="button" value="-" onclick=minus()>
-			 			<br>
-			 			<input type="button" class="button" value="1" onclick="c.text.value += '1'">
-			 			<input type="button" class="button" value="2" onclick="c.text.value += '2'">
-			 			<input type="button" class="button" value="3" onclick="c.text.value += '3'">
-			 			<input type="button" class="button button4" value="+" onclick=plus()>
-			 			<br>	
-			 			<input type="button" class="button" value="0" onclick="c.text.value += '0'">
-			 			<input type="button" class="button button5" value="00" onclick=zero()>
-			 			<input type="button" class="button button6" value="." onclick=dot()>
-			 			<input type="button" class="button button7" value="=" onclick="c.text.value = equal()">
-			 		  <br>
-			 	  </td>
-			 	</tr>
-			</table>
-		</form>
-    </div>
-    <!-- END calculator -->
+<body onload="retrievestate()">
 
-    <!-- form -->
-    <div class="task">
-      <h4>form</h4>
-    </div>
-    <!-- END form -->
+  <!-- calculator -->
+  <div class="task">
+    <h4>calculator</h4>
+    <form name="c">
+    <table>
+      <tr>
+        <td>
+          <input type="text" name="text" style="width: 350px; height:50px">
+          <br>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="button" class="button" value="c" onclick="c.text.value = ''">
+          <input type="button" class="button button1"value="x^2" onclick=square()>
+          <input type="button" class="button button2" value="%" onclick=modulus()>
+          <input type="button" class="button button3" font-size:12px value="/" onclick=div()>
+          <br>
+          <input type="button" class="button" value="7" onclick="c.text.value += '7'">
+          <input type="button" class="button" value="8" onclick="c.text.value += '8'">
+          <input type="button" class="button" value="9" onclick="c.text.value += '9'">
+          <input type="button" class="button" value="*" onclick=mul()>
+          <br>
+          <input type="button" class="button" value="4" onclick="c.text.value += '4'">
+          <input type="button" class="button" value="5" onclick="c.text.value += '5'">
+          <input type="button" class="button" value="6" onclick="c.text.value += '6'">
+          <input type="button" class="button" value="-" onclick=minus()>
+          <br>
+          <input type="button" class="button" value="1" onclick="c.text.value += '1'">
+          <input type="button" class="button" value="2" onclick="c.text.value += '2'">
+          <input type="button" class="button" value="3" onclick="c.text.value += '3'">
+          <input type="button" class="button button4" value="+" onclick=plus()>
+          <br>
+          <input type="button" class="button" value="0" onclick="c.text.value += '0'">
+          <input type="button" class="button button5" value="00" onclick=zero()>
+          <input type="button" class="button button6" value="." onclick=dot()>
+          <input type="button" class="button button7" value="=" onclick="c.text.value = equal()">
+          <br>
+        </td>
+      </tr>
+    </table>
+  </form>
+  </div>
+  <!-- END calculator -->
 
-    <!-- image slider -->
-    <div class="task">
-      <h4>image slider</h4>
-    </div>
-    <!-- END image slider -->
+  <!-- form -->
+  <div class="task">
+    <h4>form</h4>
+  </div>
+  <!-- END form -->
 
-    <!-- table -->
-    <div class="task">
-      <h4>table</h4>
-    </div>
-    <!-- END table -->
+  <!-- image slider -->
+  <div class="task">
+    <h4>image slider</h4>
+  </div>
+  <!-- END image slider -->
 
-    <!-- to-do list -->
-    <div class="task">
-      <h4>to-do list</h4>
-    </div>
-    <!-- END to-do list -->
-      
-  </body>
+  <!-- table -->
+  <div class="task">
+    <h4>table</h4>
+    <table style="width: 100%" id="table">
+      <tr>
+        <th>Id</th>
+        <th onclick="sortTable()" style="cursor: pointer">Name</th>
+        <th>Username</th>
+        <th>Email</th>
+      </tr>
+    </table>
+    <script>
+      getData();
+    </script>
+  </div>
+  <!-- END table -->
+
+  <!-- to-do list -->
+  <div class="tasktodolist">
+    <h4>to-do list</h4>
+
+    <form id="form1" action="#tasktodolist">
+      <div>
+        <label for="newitem">Add item</label>
+        <input type="text" name="newitem" id="newitem"
+               placeholder="new item" required>
+        <input type="submit" value="Add">
+      </div>
+    </form>
+      <ul id="todolist"></ul>
+
+
+
+  </div>
+
+  <!-- END to-do list -->
+
+</body>
+<script src="scripts.js"></script>
 </html>
