@@ -1,37 +1,34 @@
-console.log('hahah');
-
-//calculator begin
-		    var a,b,r,op;
-			  function equal()
+      var operand1,operand2,result,operator;
+			function equal()
+			{
+			  operand2=Number(c.text.value);
+			  if(c.text.value=='')
 			  {
-				  b=Number(c.text.value);
-				  if(c.text.value=='')
-				  {
-				    if(op=='power')
-				    {
-				      r=a**2;
-				      return r;
-				    }
-				    else
-					    alert("There is no values for computation");
-				  }
-				  else
-				  {
-					  if(op=='+')
-				      r=a+b;
-					  else if(op=='-')
-				      r=a-b;
-					  else if(op=='*')
-				      r=a*b;
-					else if(op=='/')
-				    if(b==0)
-				      return "zero division error"
-					  else        
-					    r=a/b;
-					else if(op=='%')
-					  r=a%b;
-					return r;    
-				}
+			    if(operator=='power')
+			    {
+			      result=operand1**2;
+			      return result;
+			    }
+			    else
+				    alert("There is no values for computation");
+			  }
+			  else
+			  {
+				  if(operator=='+')
+			      result=operand1+operand2;
+				  else if(operator=='-')
+			      result=operand1-operand2;
+				  else if(operator=='*')
+			      result=operand1*operand2;
+				  else if(operator=='/')
+			      if(operand2==0)
+			        return "zero division error"
+				    else        
+				      result=operand1/operand2;
+				  else if(operator=='%')
+				    result=operand1%operand2;
+				  return result;    
+			  }
 			}
 			function plus()
 			{
@@ -39,8 +36,8 @@ console.log('hahah');
 					alert("enter a number before operator");
 				else
 				{
-					a=Number(c.text.value);
-					op='+';
+					operand1=Number(c.text.value);
+					operator='+';
 					c.text.value='';
 				}
 			}
@@ -50,8 +47,8 @@ console.log('hahah');
 					alert("enter a number before operator");
 				else
 				{
-					a=Number(c.text.value);
-					op='-';
+					operand1=Number(c.text.value);
+					operator='-';
 					c.text.value='';
 				}
 			}
@@ -61,8 +58,8 @@ console.log('hahah');
 					alert("enter a number before operator");
 				else
 				{
-					a=Number(c.text.value);
-					op='*';
+					operand1=Number(c.text.value);
+					operator='*';
 					c.text.value='';
 				}
 			}
@@ -72,34 +69,34 @@ console.log('hahah');
 					alert("enter a number before operator");
 				else
 				{
-					a=Number(c.text.value);
-					op='/';
+					operand1=Number(c.text.value);
+					operator='/';
 					c.text.value='';
 				}
 			}
-			function p()
+			function square()
 			{
 				if(c.text.value=='')
 					alert("enter a number before operator");
 				else
 				{
-					a=Number(c.text.value);
-					op='power';
+					operand1=Number(c.text.value);
+					operator='power';
 					c.text.value='';
 				}
 			}
-			function per()
+			function modulus()
 			{
 				if(c.text.value=='')
 					alert("enter a number before operator");
 				else
 				{
-					a=Number(c.text.value);
-					op='%';
+					operand1=Number(c.text.value);
+					operator='%';
 					c.text.value='';
 				}
 			}
-			function z()
+			function zero()
 			{
 				if(c.text.value=='')
 					return c.text.value+='0';
@@ -113,4 +110,3 @@ console.log('hahah');
 				else
 					return c.text.value+='.';
 			}
-//calculator end			
