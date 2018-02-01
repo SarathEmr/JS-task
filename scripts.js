@@ -329,7 +329,7 @@ function sortTable() {
 	}
 */
 
-	var listItems= document.getElementsByTagName("li");
+	var listItems= $("#todo_ul li");
 	for( var i=0; i< listItems.length; i++ ){
 		listItems[i].onclick=function(){		// when a li is clicked, toggle class="checked"
 			this.classList.toggle("checked");
@@ -380,6 +380,7 @@ function sortTable() {
 
 			newli.onclick=function(){
 				this.classList.toggle("checked");
+				addToLocalStorage();
 			}
 
 			span.onclick= function(){
