@@ -283,3 +283,125 @@ function sortTable() {
     }
   }
 }
+
+
+
+
+
+	$(document).ready(function(){
+		$("li:hidden").remove();	// remove hidden li elements from document
+
+
+	});
+
+
+	function addToLocalStorage(){
+		if( typeof(Storage)!= "undefined" ){			// add contents of ul to local storage
+			localStorage.setItem("list", document.getElementById("todo_ul").innerHTML );
+		}
+		else{
+			alert("Sorry, local storage is not supported!");
+		}
+	}
+
+	
+
+	if (performance.navigation.type == 1) {				// if this page is reloaded
+    		document.getElementById("todo_ul").innerHTML= localStorage.getItem("list");  
+
+  	}
+
+
+
+				// add 'close' to the li elements
+/*
+	var listItems= document.getElementsByTagName("li");
+	for( var i=0; i< listItems.length; i++ ){
+		var span= document.createElement("span");
+		var text= document.createTextNode( "\u00D7" );
+		span.className= "close";
+		span.appendChild(text);
+		listItems[i].appendChild( span );
+
+		listItems[i].onclick=function(){
+			this.classList.toggle("checked");
+		}	
+	}
+*/
+
+	var listItems= document.getElementsByTagName("li");
+	for( var i=0; i< listItems.length; i++ ){
+		listItems[i].onclick=function(){		// when a li is clicked, toggle class="checked"
+			this.classList.toggle("checked");
+			addToLocalStorage();	
+		}	
+	}
+
+
+	
+
+
+	var closeElements= document.getElementsByClassName("close");	// when 'close' is clicked, hide the corresponding li
+	for( var i=0; i< closeElements.length; i++ ){
+		closeElements[i].onclick= function(){
+			this.parentElement.style.display= "none";
+			//$(this).parent().hide(1000);
+			addToLocalStorage();	
+		}
+	}
+
+/*
+	var checked= document.getElementsByClassName("checked");
+	for(var i=0; i< checked.length; i++){
+		var span= document.createElement("span");
+		var text= document.createTextNode( "\u2714" );
+		checked[i].appendChild(span);
+	}
+*/
+
+
+	function addLI(){
+		var input= document.getElementById("todo_text").value;
+		//alert(input);
+		if( input=="" ){
+			alert("Please enter something!");
+		}
+		else{
+			var newli= document.createElement("li");
+			var text= document.createTextNode( input );
+			newli.appendChild(text);
+
+					// add 'close'
+			var span= document.createElement("span");
+			var textx= document.createTextNode( "\u00D7" );
+			span.className= "close";
+			span.appendChild(textx);
+			newli.appendChild( span );
+
+			newli.onclick=function(){
+				this.classList.toggle("checked");
+			}
+
+			span.onclick= function(){
+				this.parentElement.style.display= "none";
+
+				addToLocalStorage();	
+			}
+
+			document.getElementById("todo_ul").appendChild( newli );	// add new li to the ul element
+
+			
+
+			addToLocalStorage();
+		}
+
+		
+	}
+
+
+
+
+
+
+
+

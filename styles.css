@@ -133,3 +133,33 @@
 #data_table td {
   text-align: center;
 }
+
+		#todo_ul{
+			list-style: none;
+			padding: 2px 5px;
+		}
+		#todo_ul li{
+			position: relative;
+			background-color: #777;
+			padding: 5px;
+			margin: 0px 30% 2px 10px;
+			border-radius: 3px;
+			cursor: pointer;
+			font-size: 20px;
+		}
+
+		.close{
+			position: absolute;
+			top: 0px;
+			right: 0px;
+		}
+		.close:hover{
+			color: red;
+		}
+		.checked{
+			text-decoration: line-through;
+
+		}
+
+
+
