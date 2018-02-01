@@ -361,7 +361,9 @@ function sortTable() {
 
 
 	function addLI(){
-		var input= document.getElementById("todo_text").value;
+		var td_input= document.getElementById("todo_text");
+		var input= td_input.value;
+		td_input.value="";
 		//alert(input);
 		if( input=="" ){
 			alert("Please enter something!");
