@@ -308,23 +308,6 @@ function sortTable() {
 
 
 
-				// add 'close' to the li elements
-/*
-	var listItems= document.getElementsByTagName("li");
-	for( var i=0; i< listItems.length; i++ ){
-		var span= document.createElement("span");
-		var text= document.createTextNode( "\u00D7" );
-		span.className= "close";
-		span.appendChild(text);
-		listItems[i].appendChild( span );
-
-		listItems[i].onclick=function(){
-			this.classList.toggle("checked");
-		}	
-	}
-*/
-
-
 
 	var listItems= document.querySelectorAll("#todo_ul li");
 	for( var i=0; i< listItems.length; i++ ){
@@ -347,14 +330,6 @@ function sortTable() {
 		}
 	}
 
-/*
-	var checked= document.getElementsByClassName("checked");
-	for(var i=0; i< checked.length; i++){
-		var span= document.createElement("span");
-		var text= document.createTextNode( "\u2714" );
-		checked[i].appendChild(span);
-	}
-*/
 
 
 	function addLI(){
