@@ -288,11 +288,7 @@ function sortTable() {
 
 
 
-	$(document).ready(function(){
-		$("li:hidden").remove();	// remove hidden li elements from document
 
-
-	});
 
 
 	function addToLocalStorage(){
@@ -308,7 +304,6 @@ function sortTable() {
 
 	if (performance.navigation.type == 1) {				// if this page is reloaded
     		document.getElementById("todo_ul").innerHTML= localStorage.getItem("list");  
-
   	}
 
 
@@ -329,7 +324,9 @@ function sortTable() {
 	}
 */
 
-	var listItems= $("#todo_ul li");
+
+
+	var listItems= document.querySelectorAll("#todo_ul li");
 	for( var i=0; i< listItems.length; i++ ){
 		listItems[i].onclick=function(){		// when a li is clicked, toggle class="checked"
 			this.classList.toggle("checked");
